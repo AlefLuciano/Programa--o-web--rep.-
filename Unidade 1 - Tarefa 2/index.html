@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div id="meu-amor"></div>
+    <div>
+      <button id="botaoCarregar">Carregando cervejas...</button>
+    </div>
+  </body>
+  <script>
+    function apagarDiv() {
+    	let div = document.getElementById("meu-amor");
+    	div.innerText = "";
+    	}
+
+    function carregarDiv() {
+    	let div = document.getElementById("meu-amor");
+    	
+
+    	setTimeout(() => {
+    		div.innerHTML = `<h1>Guinness</h1>`;
+        	
+
+			let botao = document.getElementById("botaoCarregar");
+			botao.innerText = "Apagar";
+			botao.removeEventListener("click", carregarDiv);
+			botao.addEventListener("click", apagarDiv);
+      	}, 500);
+    }
+
+    let botao = document.getElementById("botaoCarregar");
+    botao.addEventListener("click", carregarDiv);
+  </script>
+</html>
