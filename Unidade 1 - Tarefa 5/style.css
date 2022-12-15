@@ -1,0 +1,38 @@
+button {
+    padding: 8px 6px;
+    border: 1px solid darkcyan;
+    border-radius: 5px;
+    background-color: darkcyan;
+    color: #fff;
+    margin: 4px 0;
+    margin-right: 2px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: darkcyan;
+    background-color: #fff;
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+  
+  table,
+  tr {
+    border: 1px solid darkcyan;
+  }
+  
+  th,
+  td {
+    padding: 8px 10px;
+    border-right: 1px solid darkcyan;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #efefef;
+  }
+  
+  table tr:hover {
+    background-color: hsl(180, 100%, 90%);
+  }
