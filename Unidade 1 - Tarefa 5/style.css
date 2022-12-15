@@ -1,8 +1,8 @@
 button {
     padding: 8px 6px;
-    border: 1px solid darkcyan;
+    border: 1px solid rgb(145, 8, 54);
     border-radius: 5px;
-    background-color: darkcyan;
+    background-color: rgb(145, 8, 54);
     color: #fff;
     margin: 4px 0;
     margin-right: 2px;
@@ -10,7 +10,7 @@ button {
   }
   
   button:hover {
-    color: darkcyan;
+    color: rgb(145, 8, 54);
     background-color: #fff;
   }
   
@@ -20,13 +20,13 @@ button {
   
   table,
   tr {
-    border: 1px solid darkcyan;
+    border: 1px solid rgb(145, 8, 54);
   }
   
   th,
   td {
     padding: 8px 10px;
-    border-right: 1px solid darkcyan;
+    border-right: 1px solid rgb(145, 8, 54);
   }
   
   table tr:nth-child(even) {
