@@ -1,53 +1,18 @@
 <!DOCTYPE html>
-<html>   
-   <head>
-      <meta charset="UTF-8">      
-   </head>
-   
-   <body>
-      <div><button id="botaoCarregar">Carregando bebidas...</button></div>
-      <div id="meu amor"></div> 
-      <button id="btnOrdenar">Ordenar</button>
-      <button id="btnEmbaralhar">Embaralhar</button>           
-   </body>   
-
-
-   <script>
-        let bebidas = ["Cachaça", "Vodka", "Cervejas"]
-             
-        function transformar(item) {
-            return `<tr><td>${item}</td></tr>`;
-        }
-
-        function carregarDiv() {
-            let div = document.getElementById("meu amor");
-            let bebidasHtml = bebidas.map(transformar);
-            div.innerHTML = `<table>${bebidasHtml.join("\n")}</table>`;
-
-            const btnOrdenar = document.getElementById("btnOrdenar");
-            btnOrdenar = "inline-block";
-
-            const btnEmbaralhar = document.getElementById("btnEmbaralhar");
-            btnEmbaralhar = "inline-block";
-        }
-
-        let botao = document.getElementById("botaoCarregar");
-        botao.addEventListener("click", carregarDiv);
-
-        const btnOrdenar = document.getElementById("btnOrdenar");
-        btnOrdenar.addEventListener("click", () => {
-            bebidas.sort();
-            carregarDiv();
-        });
-
-            
-        const btnEmbaralhar = document.getElementById("btnEmbaralhar");
-        btnEmbaralhar.addEventListener("click", () => {
-            bebidas = bebidas
-            .map((bebidas) => ({ bebidas, sort: Math.random() }))
-            .sort((a, b) => a.sort - b.sort)
-            .map((item) => item.bebidas);
-        carregarDiv();
-        });
-   </script>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <a href="#" id="botaoCarregar">Carregando bebidas...</a>
+    </div>
+    <div id="meu amor"></div>
+    <div id="botoes">
+      <a id="btnOrdenar" href="#">Ordenar</a>
+      <a id="btnEmbaralhar" href="#">Embaralhar</a>
+    </div>
+  </body>
 </html>
